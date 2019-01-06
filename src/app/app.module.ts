@@ -3,12 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VistaComponent } from './vista/vista.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    VistaComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
