@@ -1,14 +1,19 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div class="container">
   <br/>
-  <div class="container col-lg-10">
-    <div>
-      <a href="https://thingspeak.com/channels/669929/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></a>
+<div class="row">
+    <div class="col-lg-5 col-sm-5 col-xs-12 embed-responsive embed-responsive-16by9 border rounded">
+        <iframe class="embed-responsive-item center" src="https://thingspeak.com/channels/669929/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15">
+          <p>Your browser does not support iframes.</p>
+        </iframe>
     </div>
-    <div>
-      <a href="https://thingspeak.com/channels/669929/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></a>
-    </div>
-  </div>
-</div>
 
+<div class="col-lg-2 col-sm-2"></div>
+
+    <div class="col-lg-5 col-sm-5 col-xs-12 embed-responsive embed-responsive-16by9 border rounded float-right">
+        <iframe class="embed-responsive-item center" src="https://thingspeak.com/channels/669929/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15">
+          <p>Your browser does not support iframes.</p>
+        </iframe>
+    </div>
+</div>
+</div>
 <router-outlet></router-outlet>
