@@ -20,19 +20,19 @@ export class DatosComponent implements OnInit {
         this.datos = result['feeds'];
         console.log(this.datos);
         console.log('Se recupero los datos de una manera correcta');
-        this.mostrarConsumo()
+        this.mostrarConsumo();
       },
     error => {
       console.log(<any>error);
     });
   }
 
-  mostrarConsumo(){
-    var suma = 0;
-    for ( var i = 0 ; i < this.datos.length; i++) {
-      if ( this.datos[i]['field1'] != null){
+  mostrarConsumo() {
+    let suma = 0;
+    for (let i = 0 ; i < Object.keys(this.datos).length; i++) {
+      if ( this.datos[i]['field1'] != null ) {
         suma += Number(this.datos[i]['field1']);
-        console.log(suma)
+        console.log(suma);
       }
   }
   }
