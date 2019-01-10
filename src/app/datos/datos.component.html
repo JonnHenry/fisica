@@ -1,7 +1,7 @@
 <div class="container">
   <br />
   <div class="col-lg-12 col-sm-12 col-xs-12">
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light border">
       <a class="navbar-brand" href="#">
         <img src="assets/icono-electrica.png" width="30" height="30" class="d-inline-block align-top" alt="">
         Sistema de consumo electrico
@@ -11,10 +11,18 @@
   <br />
 
   <div class="row">
-    <div class="col-lg-5 col-sm-5 col-xs-12 embed-responsive embed-responsive-16by9 border rounded">
-      <label for="name">Consumo:</label>
-      <input name="name" formControlName="name" type="text"  />
-    </div>
+      <div class="card col-lg-5" style="width: 18rem;">
+        <br />
+        <img src="/assets/icono.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Consumo electrico</h5>
+          <p class="card-text"><b>El consumo registrado es:</b> {{consumo}} KWH</p>
+          <p class="card-text"><b>El valor a pagar es: </b>{{pago}} $</p>
+          <a href="http://localhost:4200/" class="btn btn-primary">Actualizar</a>
+        </div>
+      </div>
+
+
 
     <div class="col-lg-2 col-sm-2"></div>
 

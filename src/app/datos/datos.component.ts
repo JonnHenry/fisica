@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { PeticionServicio } from '../service';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  PeticionServicio
+} from '../service';
 
 @Component({
   selector: 'app-datos',
@@ -8,11 +13,17 @@ import { PeticionServicio } from '../service';
 })
 export class DatosComponent implements OnInit {
   public datos: {};
+  public pago: number;
+  public suma: number;
   public consumo: number;
 
   constructor(
     private _peticionesServices: PeticionServicio
-  ) {}
+  ) {
+    this.suma = 0;
+    this.pago = 0;
+    this.consumo = 0;
+  }
 
   ngOnInit() {
     this._peticionesServices.getDatos().subscribe(
@@ -22,18 +33,18 @@ export class DatosComponent implements OnInit {
         console.log('Se recupero los datos de una manera correcta');
         this.mostrarConsumo();
       },
-    error => {
-      console.log(<any>error);
-    });
+      error => {
+        console.log( < any > error);
+      });
   }
 
   mostrarConsumo() {
-    let suma = 0;
-    for (let i = 0 ; i < Object.keys(this.datos).length; i++) {
-      if ( this.datos[i]['field1'] != null ) {
-        suma += Number(this.datos[i]['field1']);
-        console.log(suma);
+    for (let i = 0; i < Object.keys(this.datos).length; i++) {
+      if (this.datos[i]['field1'] != null) {
+        this.suma += Number(this.datos[i]['field1']);
       }
-  }
+    }
+    this.consumo = Number((this.suma / (1000 * 120)).toFixed(5));
+    this.pago = Number((this.suma * (1 / 750000)).toFixed(5));
   }
 }

@@ -47,5 +47,17 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.6"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonnHenry/fisica.git"
+  },
+  "author": "Jonnathan Campoberde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonnHenry/fisica/issues"
+  },
+  "homepage": "https://github.com/JonnHenry/fisica#readme"
 }
