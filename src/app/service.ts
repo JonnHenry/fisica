@@ -8,7 +8,7 @@ export class PeticionServicio {
     constructor(
       public _http: HttpClient
     ) {
-      this.urlPeticion = 'https://thingspeak.com/channels/669929/field/1.json';
+      this.urlPeticion = 'https://thingspeak.com/channels/672744/field/1.json';
     }
 
     getDatos() {
