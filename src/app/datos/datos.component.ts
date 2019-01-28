@@ -44,7 +44,7 @@ export class DatosComponent implements OnInit {
         this.suma += Number(this.datos[i]['field1']);
       }
     }
-    this.consumo = Number((this.suma / (1000 * 120)).toFixed(5));
-    this.pago = Number((this.suma * (1 / 750000)).toFixed(5));
+    this.consumo = Number((this.suma / 1000).toFixed(5));
+    this.pago = Number((this.consumo * (0.1285 )).toFixed(5));
   }
 }
